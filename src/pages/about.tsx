@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import CompanyHistory from "@/components/about/CompanyHistory";
 import CompanyValues from "@/components/about/CompanyValues";
 
@@ -17,9 +19,9 @@ interface AboutPageProps {
 const AboutPage = ({
   teamMembers = [
     {
-      name: "John Moyo",
+      name: "Mr D Phiri",
       position: "Founder & CEO",
-      bio: "John founded Mr. Fix It Hardware in 1995 with a vision to provide quality hardware products to Zimbabwean communities. His expertise in construction and passion for customer service has been the foundation of our success.",
+      bio: "Mr Phiri founded Mr. Fix It Hardware in 1995 with a vision to provide quality hardware products to Zimbabwean communities. His expertise in construction and passion for customer service has been the foundation of our success.",
       imageUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=john",
     },
     {
@@ -50,43 +52,7 @@ const AboutPage = ({
 }: AboutPageProps) => {
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="bg-white shadow-md">
-        {/* Placeholder for Header component */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <div className="text-2xl font-bold text-green-800">
-              Mr. Fix It Hardware
-            </div>
-            <nav className="ml-10 hidden md:flex space-x-8">
-              <a href="/" className="text-gray-700 hover:text-green-800">
-                Home
-              </a>
-              <a
-                href="/products"
-                className="text-gray-700 hover:text-green-800"
-              >
-                Products
-              </a>
-              <a href="/about" className="text-green-800 font-medium">
-                About Us
-              </a>
-              <a href="/contact" className="text-gray-700 hover:text-green-800">
-                Contact
-              </a>
-              <a href="/blog" className="text-gray-700 hover:text-green-800">
-                Blog
-              </a>
-            </nav>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="border rounded-md px-3 py-1">
-              <span className="font-medium">USD</span> /{" "}
-              <span className="text-gray-500">ZWL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Header />
       {/* Hero Section */}
       <section className="relative bg-green-800 text-white py-20">
         <div className="absolute inset-0 overflow-hidden">
@@ -196,96 +162,7 @@ const AboutPage = ({
         </div>
       </section>
 
-      {/* Footer placeholder */}
-      <footer className="bg-green-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Mr. Fix It Hardware</h3>
-              <p className="text-green-200">
-                Zimbabwe's trusted hardware supplier since 1995.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/" className="text-green-200 hover:text-white">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/products"
-                    className="text-green-200 hover:text-white"
-                  >
-                    Products
-                  </a>
-                </li>
-                <li>
-                  <a href="/about" className="text-green-200 hover:text-white">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/contact"
-                    className="text-green-200 hover:text-white"
-                  >
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="/blog" className="text-green-200 hover:text-white">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Contact Us</h4>
-              <address className="not-italic text-green-200">
-                123 Samora Machel Avenue
-                <br />
-                Harare, Zimbabwe
-                <br />
-                <a href="tel:+2631234567890" className="hover:text-white">
-                  +263 123 456 7890
-                </a>
-                <br />
-                <a
-                  href="mailto:info@mrfixit.co.zw"
-                  className="hover:text-white"
-                >
-                  info@mrfixit.co.zw
-                </a>
-              </address>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Newsletter</h4>
-              <p className="text-green-200 mb-2">
-                Subscribe for updates and promotions
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-3 py-2 text-black rounded-l-md w-full"
-                />
-                <button className="bg-yellow-500 text-green-900 font-bold px-4 rounded-r-md">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-green-700 mt-8 pt-8 text-center text-green-300">
-            <p>
-              &copy; {new Date().getFullYear()} Mr. Fix It Hardware. All rights
-              reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

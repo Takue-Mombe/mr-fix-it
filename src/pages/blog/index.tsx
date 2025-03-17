@@ -9,6 +9,8 @@ import {
   TabsList,
   TabsTrigger,
 } from "../../components/ui/tabs";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const BlogPage = () => {
   const [featuredPost, setFeaturedPost] = React.useState({
@@ -51,6 +53,7 @@ const BlogPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Header />
       <Helmet>
         <title>Blog - Mr. Fix It Hardware</title>
         <meta
@@ -176,6 +179,7 @@ const BlogPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

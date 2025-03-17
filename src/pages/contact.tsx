@@ -1,19 +1,15 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 import ContactForm from "@/components/contact/ContactForm";
 import ContactMap from "@/components/contact/ContactMap";
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      {/* Header placeholder - will be implemented separately */}
-      <header className="bg-green-800 text-white p-4">
-        <div className="container mx-auto">
-          <h1 className="text-2xl font-bold">Mr. Fix It Hardware</h1>
-        </div>
-      </header>
-
+    <div className="min-h-screen bg-gray-50">
+      <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
         {/* Page Header */}
         <div className="text-center mb-12">
@@ -123,15 +119,7 @@ const ContactPage = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer placeholder - will be implemented separately */}
-      <footer className="bg-green-900 text-white p-8">
-        <div className="container mx-auto">
-          <p className="text-center">
-            &copy; 2023 Mr. Fix It Hardware. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

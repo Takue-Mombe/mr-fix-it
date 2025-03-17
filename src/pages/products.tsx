@@ -5,6 +5,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Search, SlidersHorizontal } from "lucide-react";
 import ProductFilters from "@/components/products/ProductFilters";
 import ProductGrid from "@/components/products/ProductGrid";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 interface Product {
   id: string;
@@ -221,6 +223,7 @@ const ProductsPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <Header />
       {/* Page Header */}
       <div className="bg-green-700 py-8 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
@@ -349,6 +352,7 @@ const ProductsPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
